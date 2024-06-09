@@ -114,7 +114,9 @@ function InscrireUser(){
 fetch("http://127.0.0.1:8000/api/registration", requestOptions)
   .then((response) => {
     if(response.ok){
+        window.location.replace("/");
         return response.json();
+        
     }
     else{
         alert("erreur lors de l'inscription")
